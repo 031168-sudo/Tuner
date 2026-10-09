@@ -15,7 +15,7 @@ def A(name, value):
     return (True, name, value)
 
 def manifest(pkg, label, activity):
-    return ("manifest", [(False, "package", pkg), A("versionCode", 2), A("versionName", "1.1")], [
+    return ("manifest", [(False, "package", pkg), A("versionCode", 3), A("versionName", "1.2")], [
         ("uses-sdk", [A("minSdkVersion", 21), A("targetSdkVersion", 29)], []),
         ("uses-permission", [A("name", "android.permission.RECORD_AUDIO")], []),
         ("application", [A("label", label), A("icon", ("ref", 0x7f020000))], [

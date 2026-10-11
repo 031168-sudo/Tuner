@@ -79,7 +79,7 @@ public class MainActivity extends Activity implements TunerView.Listener {
             if (!shouldShowRequestPermissionRationale(Manifest.permission.RECORD_AUDIO)
                     && checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
                 // Might be permanently denied: request anyway; if nothing happens, user must use settings
-                view.setMessage("Нужен доступ к микрофону.\nЕсли окно не появилось —\nНастройки → Приложения →\nМой тюнер → Разрешения.");
+                view.setMessage("Нужен доступ к микрофону.\nЕсли окно не появилось —\nНастройки → Приложения →\nМой Тюнер → Разрешения.");
             }
             requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, REQ_MIC);
         }

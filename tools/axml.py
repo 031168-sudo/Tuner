@@ -15,7 +15,7 @@ def A(name, value):
     return (True, name, value)
 
 def manifest(pkg, label, activity):
-    return ("manifest", [(False, "package", pkg), A("versionCode", 3), A("versionName", "1.2")], [
+    return ("manifest", [(False, "package", pkg), A("versionCode", 4), A("versionName", "1.3")], [
         ("uses-sdk", [A("minSdkVersion", 21), A("targetSdkVersion", 29)], []),
         ("uses-permission", [A("name", "android.permission.RECORD_AUDIO")], []),
         ("application", [A("label", label), A("icon", ("ref", 0x7f020000))], [
@@ -105,6 +105,6 @@ def build(root):
     return struct.pack("<HHI", 0x0003, 8, 8 + len(content)) + content
 
 if __name__ == "__main__":
-    out = build(manifest("ru.andrey.guitartuner", "Мой тюнер", "ru.andrey.guitartuner.MainActivity"))
+    out = build(manifest("ru.andrey.guitartuner", "Мой Тюнер", "ru.andrey.guitartuner.MainActivity"))
     open(sys.argv[1], "wb").write(out)
     print("wrote", len(out), "bytes")
